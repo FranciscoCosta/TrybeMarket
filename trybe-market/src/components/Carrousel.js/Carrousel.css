@@ -1,0 +1,41 @@
+.mySwiper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 80%;
+  margin: 2rem;
+  min-height: 20rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 35px;
+}
+
+.Carrousel__container-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.swiper-slide-active {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Carrousel__item-img {
+  width: 9rem;
+}
+
+.test {
+  height: 15rem !important;
+  z-index: 1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Carrousel__item-title {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+}
