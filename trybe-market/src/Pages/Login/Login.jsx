@@ -1,5 +1,5 @@
 
-import React, { Suspense, useState, useContext } from 'react';
+import React, { Suspense, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Canvas} from "@react-three/fiber"
 import {OrbitControls} from "@react-three/drei"
