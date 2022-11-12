@@ -6,7 +6,6 @@ source: https://sketchfab.com/3d-models/online-store-anil-37325ea8995b4b5e81ac1b
 title: Online Store - Anil
 */
 
-import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {

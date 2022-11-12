@@ -1,4 +1,6 @@
-import React, { Suspense } from 'react'
+
+import React, { Suspense, useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Canvas} from "@react-three/fiber"
 import {OrbitControls} from "@react-three/drei"
 import {Model} from '../../components/Store'
@@ -6,7 +8,38 @@ import { FcGoogle } from '@react-icons/all-files/fc/FcGoogle';
 import logo from '../../Assets/LOGO.png'
 import './Login.css'
 
-function Login() {
+
+function Login({history}) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [valid, setvalid] = useState(false);
+  const navigate = useNavigate();
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'email') {
+      setEmail(value);
+    } if (name === 'password') {
+      setPassword(value);
+    }
+    const MIN_LENGTH_PASS = 6;
+    const regex = /\S+@\S+\.\S+/;
+    const verifyEmail = email && regex.test(email);
+    const verifyName = password.length >= MIN_LENGTH_PASS;
+    if (verifyEmail && verifyName) {
+      setvalid(true);
+    } else {
+      setvalid(false);
+    }
+  };
+  const handleClick = async () => {
+
+    const user = {
+      email,
+    };
+    localStorage.setItem('user', JSON.stringify((user)));
+    navigate('/home');
+  }
   return (
     <div className='Login'>
       <div className='Login__container'>
@@ -21,8 +54,8 @@ function Login() {
             data-testid="email-input"
             required
             name="email"
-            // onChange={ handleChange }
-            // value={ email }
+            onChange={ handleChange }
+            value={ email }
           />
           <input
             type="password"
@@ -31,14 +64,14 @@ function Login() {
             data-testid="password-input"
             required
             name="password"
-            // onChange={ handleChange }
-            // value={ password }
+            onChange={ handleChange }
+            value={ password }
           />
           <button
             className="Login__button"
-            // onClick={ handleClick }
+            onClick={ handleClick }
             type="button"
-            // disabled={ !valid }
+            disabled={ !valid }
             data-testid="login-submit-btn"
           >
             Enter
