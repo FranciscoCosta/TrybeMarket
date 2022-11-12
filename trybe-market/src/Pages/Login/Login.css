@@ -138,3 +138,14 @@ canvas {
 .google-svg {
   margin-right: 10px;
 }
+
+.Login__text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.Login__span {
+  color: #0033a0;
+  font-weight: 600;
+  cursor: pointer;
+}

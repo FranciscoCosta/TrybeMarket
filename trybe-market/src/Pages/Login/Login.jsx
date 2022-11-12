@@ -1,25 +1,24 @@
+import React, { Suspense, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Model } from "../../components/Store";
+import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
+import logo from "../../Assets/LOGO.png";
+import "./Login.css";
 
-import React, { Suspense, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Canvas} from "@react-three/fiber"
-import {OrbitControls} from "@react-three/drei"
-import {Model} from '../../components/Store'
-import { FcGoogle } from '@react-icons/all-files/fc/FcGoogle';
-import logo from '../../Assets/LOGO.png'
-import './Login.css'
-
-
-function Login({history}) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Login({ history }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [valid, setvalid] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (name === 'email') {
+    if (name === "email") {
       setEmail(value);
-    } if (name === 'password') {
+    }
+    if (name === "password") {
       setPassword(value);
     }
     const MIN_LENGTH_PASS = 6;
@@ -33,20 +32,23 @@ function Login({history}) {
     }
   };
   const handleClick = async () => {
-
     const user = {
       email,
     };
-    localStorage.setItem('user', JSON.stringify((user)));
-    navigate('/home');
+    localStorage.setItem("user", JSON.stringify(user));
+    navigate("/home");
+  };
+
+  const handleSignup = () =>{
+    navigate("/signup")
   }
   return (
-    <div className='Login'>
-      <div className='Login__container'>
-        <div className='Login__form'>
-        <div className="Login__container-logo">
-          <img src={ logo } alt="trybe recepies logo" />
-        </div>
+    <div className="Login">
+      <div className="Login__container">
+        <div className="Login__form">
+          <div className="Login__container-logo">
+            <img src={logo} alt="trybe recepies logo" />
+          </div>
           <input
             type="email"
             className="Login__input-email"
@@ -54,8 +56,8 @@ function Login({history}) {
             data-testid="email-input"
             required
             name="email"
-            onChange={ handleChange }
-            value={ email }
+            onChange={handleChange}
+            value={email}
           />
           <input
             type="password"
@@ -64,14 +66,20 @@ function Login({history}) {
             data-testid="password-input"
             required
             name="password"
-            onChange={ handleChange }
-            value={ password }
+            onChange={handleChange}
+            value={password}
           />
+          <p className="Login__text">
+            Don't have an account ? <span 
+            onClick={handleSignup}
+            className="Login__span">Sign up</span>
+            .
+          </p>
           <button
             className="Login__button"
-            onClick={ handleClick }
+            onClick={handleClick}
             type="button"
-            disabled={ !valid }
+            disabled={!valid}
             data-testid="login-submit-btn"
           >
             Enter
@@ -81,21 +89,21 @@ function Login({history}) {
             type="button"
             className="Login__google-button"
           >
-            <FcGoogle size={ 20 } className="google-svg" />
+            <FcGoogle size={20} className="google-svg" />
             Sign in using Google
           </button>
         </div>
-      <Canvas className='canvas'>
-        <OrbitControls enableZoom={false}/>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-2,5,2]} intensity={1} />
-        <Suspense fallback={null}>
-          <Model/>
+        <Canvas className="canvas">
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[-2, 5, 2]} intensity={1} />
+          <Suspense fallback={null}>
+            <Model />
           </Suspense>
-      </Canvas>
+        </Canvas>
       </div>
     </div>
-  )
+  );
 }
 
 export default Login;
