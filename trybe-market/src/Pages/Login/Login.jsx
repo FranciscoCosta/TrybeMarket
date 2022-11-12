@@ -7,7 +7,7 @@ import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
 import logo from "../../Assets/LOGO.png";
 import "./Login.css";
 
-function Login({ history }) {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [valid, setvalid] = useState(false);
@@ -39,16 +39,21 @@ function Login({ history }) {
     navigate("/home");
   };
 
-  const handleSignup = () =>{
-    navigate("/signup")
-  }
+  const handleSignup = () => {
+    navigate("/signup");
+  };
+
+  const handleForgotPassoword = () => {
+    navigate("/forgotpassword");
+  };
   return (
     <div className="Login">
       <div className="Login__container">
         <div className="Login__form">
           <div className="Login__container-logo">
-            <img src={logo} alt="trybe recepies logo" />
+            <img src={logo} alt="TrybeMarket logo" />
           </div>
+          <div className="Login__form-acc">
           <input
             type="email"
             className="Login__input-email"
@@ -69,12 +74,10 @@ function Login({ history }) {
             onChange={handleChange}
             value={password}
           />
-          <p className="Login__text">
-            Don't have an account ? <span 
-            onClick={handleSignup}
-            className="Login__span">Sign up</span>
-            .
-          </p>
+          <span 
+          onClick={handleForgotPassoword}
+          className="Login__span">Forgot password ?</span>
+          </div>
           <button
             className="Login__button"
             onClick={handleClick}
@@ -84,6 +87,14 @@ function Login({ history }) {
           >
             Enter
           </button>
+          <p className="Login__text">
+            Don't have an account ?{" "}
+            <span onClick={handleSignup} className="Login__span">
+              Sign up
+            </span>
+            .
+          </p>
+          
           <button
             // onClick={ GoogleLogin }
             type="button"

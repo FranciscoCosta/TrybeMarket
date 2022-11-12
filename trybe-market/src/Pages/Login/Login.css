@@ -53,7 +53,6 @@ canvas {
   font-weight: 700;
   height: 55px;
   letter-spacing: 2.5px;
-  margin-top: 1rem;
   outline: none;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
@@ -86,7 +85,13 @@ canvas {
   height: 100%;
   width: 100%;
 }
-
+.Login__form-acc {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+}
 .Login__input-email,
 .Login__input-password {
   background-color: white;
@@ -101,10 +106,6 @@ canvas {
   padding: 8px 10px;
   transition: all 0.3s ease 0s;
   width: 20rem;
-}
-
-.Login__input-password {
-  margin-bottom: 2rem;
 }
 
 .Login__input-email:focus,
@@ -133,6 +134,13 @@ canvas {
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
   width: 260px;
+}
+
+.Login__google-button:hover {
+  background-color: #59b7e1;
+  box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+  color: black;
+  transform: translateY(-7px);
 }
 
 .google-svg {
