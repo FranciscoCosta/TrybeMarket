@@ -26,6 +26,13 @@ function Provider({ children }) {
       return response.ok && Promise.resolve(json);
     };
 
+    const handleCategory = async(category)=> {
+      const url = `https://api.mercadolibre.com/sites/MLB/search?category=${category}`
+      const result = await fetchApi(url);
+      const {results} = result
+      setproductsList(results);
+    }
+
     const context = useMemo(
       () => ({
     fetchCategory,
@@ -34,6 +41,7 @@ function Provider({ children }) {
     productsList,
     handleStart,
     isLoading,
+    handleCategory,
       }),
       [category,fetchCategory,productsList,isLoading],
     );

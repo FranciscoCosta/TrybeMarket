@@ -6,7 +6,7 @@ import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { Context } from "../../Context/Context";
 
 function Header() {
-  const { category, fetchCategory } = useContext(Context);
+  const { category, fetchCategory,handleCategory } = useContext(Context);
   const [serachBar, setserachBar] = useState(false);
 
   useEffect(() => {
@@ -24,10 +24,12 @@ function Header() {
       </div>
       <div className="Header__central">
         <div className="Header__category-dropdown">
-          <button className="Header__category-btn">Category</button>
+          <button className="Header__category-btn">Categorias</button>
           <div className="Header__category-list">
             {category.map((cat) => (
-              <button key={`category-${cat.id}`}>{cat.name}</button>
+              <button
+              onClick={()=>handleCategory(cat.id)}
+              key={`category-${cat.id}`}>{cat.name}</button>
             ))}
           </div>
         </div>

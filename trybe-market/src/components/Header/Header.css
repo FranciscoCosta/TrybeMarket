@@ -49,7 +49,7 @@
   outline: none;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
-  width: 150px;
+  width: 170px;
 }
 
 .Header__search {
@@ -97,7 +97,7 @@
 .Header__category-list {
   display: none;
   position: absolute;
-  max-width: 160px;
+  max-width: 170px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   max-height: 80vh;
@@ -123,7 +123,7 @@
   outline: none;
   text-overflow: clip;
   transition: all 0.3s ease 0s;
-  width: 150px;
+  width: 170px;
 }
 .Header__category-list button:hover {
   background-color: #59b7e1;

@@ -3,3 +3,8 @@
   margin: 0 auto;
   min-height: 100vh;
 }
+
+.Carrousel__promotions-title {
+  text-align: center;
+  margin-top: 2rem;
+}

@@ -1,0 +1,13 @@
+.DisplayItems__container {
+  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.DiplayItems__item-container {
+  border: 1px solid blue;
+}
