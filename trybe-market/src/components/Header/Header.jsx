@@ -6,17 +6,26 @@ import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { Context } from "../../Context/Context";
 
 function Header() {
-  const { category, fetchCategory,handleCategory } = useContext(Context);
+  const { category, fetchCategory,handleCategory,handleSearch } = useContext(Context);
   const [serachBar, setserachBar] = useState(false);
+  const [searchValue, setsearchValue] = useState('');
 
   useEffect(() => {
     fetchCategory();
   }, []);
 
+  const handleSearchValue = (event) =>{
+    const { value } = event.target;
+    setsearchValue(value)
+  }
   const handlesearchBar = () => {
     setserachBar(!serachBar);
     console.log(category);
   };
+  const handlesearchCall = () =>{
+    handleSearch(searchValue)
+  }
+
   return (
     <div className="Header">
       <div className="Header__container-logo">
@@ -50,11 +59,20 @@ function Header() {
             }}
           />
           {serachBar && (
+            <>
             <input
               type="search"
               className="Header__input-search"
               name="search"
-            />
+              onChange={handleSearchValue}
+              />
+              <AiOutlineSearch 
+              className="Header__input-search-btn"
+              size={40}
+              style= {{border: "none", background: "none"}}
+              onClick={handlesearchCall}
+              />
+            </>
           )}
         </div>
       </div>

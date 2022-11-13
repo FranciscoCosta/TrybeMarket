@@ -1,5 +1,4 @@
 .DisplayItems__container {
-  border: 1px solid red;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -10,4 +9,9 @@
 
 .DiplayItems__item-container {
   border: 1px solid blue;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 35rem;
 }

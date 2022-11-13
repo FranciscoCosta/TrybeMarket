@@ -1,11 +1,12 @@
 .Header {
   display: flex;
-  background-color: #59b6e171;
+  background-color: #59b6e1e1;
   align-items: center;
   justify-content: space-between;
   border: 1px solid rgba(0, 0, 0, 0.2);
   min-height: 7rem;
   position: sticky;
+  top: 0;
 }
 
 .Header__container-logo {
@@ -131,4 +132,8 @@
 
 .Header__category-dropdown:hover .Header__category-list {
   display: block;
+}
+
+.Header__input-search-btn {
+  border: none;
 }

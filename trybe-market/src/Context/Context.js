@@ -33,6 +33,14 @@ function Provider({ children }) {
       setproductsList(results);
     }
 
+    const handleSearch = async(query) => {
+      const url = ` https://api.mercadolibre.com/sites/MLB/search?q=${query}`
+      const result = await fetchApi(url);
+      const {results} = result
+      setproductsList(results);
+     
+    }
+
     const context = useMemo(
       () => ({
     fetchCategory,
@@ -42,6 +50,7 @@ function Provider({ children }) {
     handleStart,
     isLoading,
     handleCategory,
+    handleSearch,
       }),
       [category,fetchCategory,productsList,isLoading],
     );
