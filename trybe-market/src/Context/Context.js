@@ -6,6 +6,7 @@ function Provider({ children }) {
   const [category, setcategory] = useState([])
   const [productsList, setproductsList] = useState([])
   const [isLoading, setisLoading] = useState(true)
+  const [cartItemQuantity, setcartItemQuantity] = useState(0);
 
   // true-disable-next-line react-hooks/exhaustive-deps
   const fetchCategory = async() => {
@@ -38,7 +39,16 @@ function Provider({ children }) {
       const result = await fetchApi(url);
       const {results} = result
       setproductsList(results);
-     
+    }
+    const handleTotalCart = () =>{
+      const oldCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+      if(oldCart.length === 0){
+        setcartItemQuantity(0);
+      }else{
+        const itemQuantitys = oldCart.map((item) => item.quantity);
+        const sum = itemQuantitys.reduce((accumulator, curr) => accumulator + curr);
+        setcartItemQuantity(sum)
+      }
     }
 
     const context = useMemo(
@@ -51,8 +61,11 @@ function Provider({ children }) {
     isLoading,
     handleCategory,
     handleSearch,
+    cartItemQuantity,
+    setcartItemQuantity,
+    handleTotalCart,
       }),
-      [category,fetchCategory,productsList,isLoading],
+      [category,fetchCategory,productsList,isLoading,cartItemQuantity],
     );
 
   return <Context.Provider value={ context }>{children}</Context.Provider>;

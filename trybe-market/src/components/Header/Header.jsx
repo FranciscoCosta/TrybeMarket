@@ -6,13 +6,15 @@ import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { Context } from "../../Context/Context";
 
 function Header() {
-  const { category, fetchCategory,handleCategory,handleSearch } = useContext(Context);
+  const { category, fetchCategory,handleCategory,handleSearch, cartItemQuantity,handleTotalCart,setcartItemQuantity } = useContext(Context);
   const [serachBar, setserachBar] = useState(false);
   const [searchValue, setsearchValue] = useState('');
+ 
 
   useEffect(() => {
     fetchCategory();
-  }, []);
+    handleTotalCart();
+  }, [cartItemQuantity,setcartItemQuantity, handleTotalCart]); 
 
   const handleSearchValue = (event) =>{
     const { value } = event.target;
@@ -77,7 +79,10 @@ function Header() {
         </div>
       </div>
       <div className="Header__account">
-        <AiOutlineShoppingCart size={30} />
+        <AiOutlineShoppingCart size={40} />
+        <div className="CartItem__quantity-display">
+        <p >{cartItemQuantity}</p>
+        </div>
       </div>
     </div>
   );

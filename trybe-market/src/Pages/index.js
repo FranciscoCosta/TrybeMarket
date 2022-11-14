@@ -3,7 +3,9 @@ import Homepage from './Homepage/Homepage';
 import Profile from './Profile/Profile';
 import Signup from './Signup/Signup';
 import Forgotpassword from './Forgotpassword/Forgotpassword';
+import ProductDetails from './productDetails/ProductDetails';
+
 
 export{
-    Login, Homepage, Profile, Signup, Forgotpassword
+    Login, Homepage, Profile, Signup, Forgotpassword,ProductDetails
 }
