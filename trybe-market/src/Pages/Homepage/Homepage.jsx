@@ -11,6 +11,7 @@ function Homepage() {
       <section className='Homepage__main'>
       <h1 className='Carrousel__promotions-title'>COMPRE AGORA PROMOÇÕES NO TRYBEMARKET 💛</h1>
       <Carrousel />
+      <h1 className='DisplayItems__title'>Produtos relacionados:</h1>
       <DisplayItems />
       </section>
     </div>
