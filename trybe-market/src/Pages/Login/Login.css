@@ -31,7 +31,7 @@
   margin-left: 40%;
   position: absolute;
   transition: 0.7s all ease;
-  width: 28rem;
+  width: 100%;
   z-index: 1;
 }
 
