@@ -3,11 +3,11 @@ import { Context } from "../../Context/Context";
 import "./Carrousel.css";
 
 function Carrousel() {
-  const { handleStart, productsList, isLoading } = useContext(Context);
+  const { handleStart, isLoading, copyproductList } = useContext(Context);
   useEffect(() => {
     handleStart();
     if (!isLoading) {
-      const value = productsList.filter(
+      const value = copyproductList.filter(
         (product) =>
           product.original_price !== null &&
           product.original_price !== product.price
@@ -20,7 +20,7 @@ function Carrousel() {
     <div className="Carrousel">
       {!isLoading && (
         <div className="Carrousel__container">
-          {productsList
+          {copyproductList
             .filter(
               (product) =>
                 product.original_price !== null &&

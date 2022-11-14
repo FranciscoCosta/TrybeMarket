@@ -1,0 +1,49 @@
+.Filters__container {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  gap: 5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.Filter__order-alphabetically,
+.Filter__order-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.filters__items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Filters__container svg {
+  background-color: #59b7e1;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #0033a0;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.Filters__container svg:hover {
+  color: black;
+  border: 1px solid black;
+  transition: 0.3s all ease-in;
+  transform: translateY(-3px);
+}
+
+input[type="checkbox"] {
+  zoom: 2;
+}
+
+.Filter__free-shiping {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}

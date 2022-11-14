@@ -5,6 +5,7 @@ function Provider({ children }) {
 
   const [category, setcategory] = useState([])
   const [productsList, setproductsList] = useState([])
+  const [copyproductList, setcopyproductList] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const [cartItemQuantity, setcartItemQuantity] = useState(0);
 
@@ -19,6 +20,7 @@ function Provider({ children }) {
     const result = await fetchApi(url);
     const {results} = result
     setproductsList(results);
+    setcopyproductList(results)
     setisLoading(false);
   }
     const fetchApi = async (url) => {
@@ -32,6 +34,7 @@ function Provider({ children }) {
       const result = await fetchApi(url);
       const {results} = result
       setproductsList(results);
+      setcopyproductList(results);
     }
 
     const handleSearch = async(query) => {
@@ -39,6 +42,7 @@ function Provider({ children }) {
       const result = await fetchApi(url);
       const {results} = result
       setproductsList(results);
+      setcopyproductList(results);
     }
     const handleTotalCart = () =>{
       const oldCart = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -64,8 +68,10 @@ function Provider({ children }) {
     cartItemQuantity,
     setcartItemQuantity,
     handleTotalCart,
+    setcopyproductList,
+    copyproductList,
       }),
-      [category,fetchCategory,productsList,isLoading,cartItemQuantity],
+      [category,fetchCategory,productsList,isLoading,cartItemQuantity,copyproductList],
     );
 
   return <Context.Provider value={ context }>{children}</Context.Provider>;
