@@ -1,0 +1,11 @@
+.ProductDetails {
+  background: url(../../Assets/blackbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 0;
+}

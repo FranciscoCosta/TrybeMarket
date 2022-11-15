@@ -8,7 +8,7 @@ import './Homepage.css'
 function Homepage() {
   return (
     <div>
-      <Header/>
+      <Header central/>
       <section className='Homepage__main'>
       <h1 className='Carrousel__promotions-title'>COMPRE AGORA PROMOÇÕES NO TRYBEMARKET 💛</h1>
       <Carrousel />

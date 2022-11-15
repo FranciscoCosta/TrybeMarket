@@ -23,6 +23,7 @@
 .DisplayItems__item-title {
   text-align: center;
   min-height: 6rem;
+  max-height: 6rem;
   font-size: 1.5rem;
   line-height: 2rem;
   cursor: pointer;
@@ -48,7 +49,7 @@
 }
 
 .DisplayItems__price {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #00c21d;
 }
 
@@ -102,4 +103,11 @@
   background-color: #59b7e1;
   border: 1px solid rgba(0, 0, 0, 0.45);
   box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+}
+
+.DisplayItems__old-price {
+  color: crimson;
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  text-align: center;
 }

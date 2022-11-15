@@ -8,6 +8,7 @@ function Provider({ children }) {
   const [copyproductList, setcopyproductList] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const [cartItemQuantity, setcartItemQuantity] = useState(0);
+  const [itemDetails, setitemDetails] = useState([])
 
   // true-disable-next-line react-hooks/exhaustive-deps
   const fetchCategory = async() => {
@@ -55,6 +56,15 @@ function Provider({ children }) {
       }
     }
 
+    const fetchItem =async(id)=>{
+      setisLoading(true)
+      console.log(id)
+      const url = ` https://api.mercadolibre.com/items/${id}`
+      const result = await fetchApi(url);
+      setitemDetails(result)
+      console.log(result);
+    }
+
     const context = useMemo(
       () => ({
     fetchCategory,
@@ -70,8 +80,11 @@ function Provider({ children }) {
     handleTotalCart,
     setcopyproductList,
     copyproductList,
+    itemDetails,
+    fetchItem,
+    setisLoading,
       }),
-      [category,fetchCategory,productsList,isLoading,cartItemQuantity,copyproductList],
+      [category,fetchCategory,productsList,isLoading,cartItemQuantity,copyproductList,itemDetails],
     );
 
   return <Context.Provider value={ context }>{children}</Context.Provider>;

@@ -37,7 +37,10 @@ function DisplayItems() {
             className="DisplayItems__container-img">
               <img src={item.thumbnail} alt={item.id} />
             </div>
-            <h4 className="DisplayItems__price">{item.price} R$</h4>
+            {(item.original_price) && <h3
+            className="DisplayItems__old-price"
+            >R$ {item.original_price}</h3>}
+            <h4 className="DisplayItems__price">R$ {item.price}</h4>
             <p className="DisplayItems__Quantity-text">
               Unidades disponíveis:{" "}
               <span className="DisplayItems__item-quantitys">

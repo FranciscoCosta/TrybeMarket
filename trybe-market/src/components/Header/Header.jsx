@@ -5,7 +5,7 @@ import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppi
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { Context } from "../../Context/Context";
 
-function Header() {
+function Header({central}) {
   const { category, fetchCategory,handleCategory,handleSearch, cartItemQuantity,handleTotalCart,setcartItemQuantity } = useContext(Context);
   const [serachBar, setserachBar] = useState(false);
   const [searchValue, setsearchValue] = useState('');
@@ -31,9 +31,10 @@ function Header() {
   return (
     <div className="Header">
       <div className="Header__container-logo">
-        <img src={logo} alt="TrybeMarket logo" />
+        <img 
+        src={logo} alt="TrybeMarket logo" />
       </div>
-      <div className="Header__central">
+      {central && <div className="Header__central">
         <div className="Header__category-dropdown">
           <button className="Header__category-btn">Categorias</button>
           <div className="Header__category-list">
@@ -78,6 +79,7 @@ function Header() {
           )}
         </div>
       </div>
+      }
       <div className="Header__account">
         <AiOutlineShoppingCart size={40} />
         <div className="CartItem__quantity-display">
