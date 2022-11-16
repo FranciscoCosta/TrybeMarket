@@ -10,8 +10,8 @@ function DisplayItems() {
   const handleAddCart = (item) => {
     const newItem = item
     newItem['quantity'] = 1;
-    handleTotalCart();
     handleLocalStorage(newItem);
+    handleTotalCart();
   }
 
   const handleLocalStorage=(value)=> {

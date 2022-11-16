@@ -7,13 +7,13 @@ import "./ProductDetailsCard.css";
 function ProductDetailsCard() {
   const params = useParams();
   const [inputQuantity, setinputQuantity] = useState(1)
-  const { fetchItem, itemDetails, setisLoading, isLoading } =
+  const { fetchItem, itemDetails, setisLoading, isLoading, cartItemQuantity, setcartItemQuantity,handleTotalCart} =
     useContext(Context);
 
   useEffect(() => {
     fetchItem(params.id);
     setisLoading(false);
-  }, []);
+  }, [cartItemQuantity,setcartItemQuantity]);
 
   const handleIncrement=()=>{
     if(!inputQuantity < itemDetails.available_quantity){
@@ -38,16 +38,19 @@ function ProductDetailsCard() {
           return item
         }})
         localStorage.setItem('cartItems', JSON.stringify(newStorage));
+        handleTotalCart();
       }else{
 
         const newItem = itemDetails
         newItem['quantity']= inputQuantity
         localStorage.setItem('cartItems', JSON.stringify([...local,newItem]));
+        handleTotalCart();
       }
     }else{
       const newItem = itemDetails
         newItem['quantity']= inputQuantity
       localStorage.setItem('cartItems', JSON.stringify([newItem]));
+      handleTotalCart();
     }
   }
 

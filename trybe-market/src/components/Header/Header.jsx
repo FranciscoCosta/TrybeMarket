@@ -25,7 +25,7 @@ function Header({ central }) {
     handleTotalCart();
   }, [cartItemQuantity, setcartItemQuantity]);
 
-  const handleSearchValue = (event) => {
+  const handleSearchValue = (event) => {  
     const { value } = event.target;
     setsearchValue(value);
   };
