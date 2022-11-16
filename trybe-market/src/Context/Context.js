@@ -50,6 +50,7 @@ function Provider({ children }) {
       if(oldCart.length === 0){
         setcartItemQuantity(0);
       }else{
+        console.log(oldCart,"aquiiiiiii")
         const itemQuantitys = oldCart.map((item) => item.quantity);
         const sum = itemQuantitys.reduce((accumulator, curr) => accumulator + curr);
         setcartItemQuantity(sum)

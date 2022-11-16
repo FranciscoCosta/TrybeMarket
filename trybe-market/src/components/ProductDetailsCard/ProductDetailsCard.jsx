@@ -39,12 +39,15 @@ function ProductDetailsCard() {
         }})
         localStorage.setItem('cartItems', JSON.stringify(newStorage));
       }else{
-        itemDetails.quantity = inputQuantity
-        localStorage.setItem('cartItems', JSON.stringify(...local,itemDetails));
+
+        const newItem = itemDetails
+        newItem['quantity']= inputQuantity
+        localStorage.setItem('cartItems', JSON.stringify([...local,newItem]));
       }
     }else{
-      itemDetails.quantity = inputQuantity
-      localStorage.setItem('cartItems', JSON.stringify([itemDetails]));
+      const newItem = itemDetails
+        newItem['quantity']= inputQuantity
+      localStorage.setItem('cartItems', JSON.stringify([newItem]));
     }
   }
 
