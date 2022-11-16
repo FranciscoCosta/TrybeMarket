@@ -1,4 +1,4 @@
-import React, { createContext, useState, useMemo} from 'react';
+import React, { createContext, useState, useMemo, useEffect} from 'react';
 
 export const Context = createContext();
 function Provider({ children }) {
@@ -50,7 +50,6 @@ function Provider({ children }) {
       if(oldCart.length === 0){
         setcartItemQuantity(0);
       }else{
-        console.log(oldCart,"aquiiiiiii")
         const itemQuantitys = oldCart.map((item) => item.quantity);
         const sum = itemQuantitys.reduce((accumulator, curr) => accumulator + curr);
         setcartItemQuantity(sum)

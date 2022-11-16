@@ -20,9 +20,10 @@ function Header({ central }) {
   const [searchValue, setsearchValue] = useState("");
 
   useEffect(() => {
+    console.log(cartItemQuantity)
     fetchCategory();
     handleTotalCart();
-  }, [cartItemQuantity, setcartItemQuantity, handleTotalCart]);
+  }, [cartItemQuantity, setcartItemQuantity]);
 
   const handleSearchValue = (event) => {
     const { value } = event.target;

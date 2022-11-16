@@ -159,3 +159,9 @@
   padding: 0px 10px;
   width: max-content;
 }
+
+.ProductDetails__quantity-cart-btn:hover {
+  background-color: #59b7e1;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+}
