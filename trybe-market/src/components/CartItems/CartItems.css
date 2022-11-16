@@ -18,6 +18,12 @@
 
 .CartItems__right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  justify-content: center;
+  padding-right: 4rem;
 }
 
 .CartItems__left {
@@ -27,16 +33,16 @@
   align-items: flex-start;
   height: 100vh;
   gap: 1rem;
-  flex: 3;
+  flex: 4;
   padding-left: 4rem;
 }
 
 .CartItem__item-card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  width: 90%;
+  width: 95%;
 }
 
 .CartItems__img {
@@ -54,21 +60,50 @@
   margin: 3rem 0rem;
 }
 
-.CartItems__remove-item {
-  border: 1px solid black;
-  background-color: #0033a0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
+.CartItems__info {
+  font-size: 1.2rem;
+  margin: 0.25rem;
+  font-weight: 500;
+}
+.CartItems__info span {
+  font-size: 1.4rem;
+  color: #0033a0;
+  font-weight: 600;
+}
+.remove-btn {
+  justify-self: flex-start;
 }
 
-.CartItems__remove-btn {
-  background-color: rgba(0, 0, 0, 0);
-  text-align: center;
+.CartItems__details {
+  padding: 1rem;
+}
+
+.CartItems__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+.CartItems-btn {
+  align-self: center;
+  background-color: #0033a0;
   border: none;
+  border-radius: 15px;
+  box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 50px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  width: 190px;
+}
+
+.CartItems-btn:hover {
+  background-color: #59b7e1;
+  box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+  color: black;
+  transform: translateY(-7px);
 }

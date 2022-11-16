@@ -1,6 +1,6 @@
 .ProductDetails__container {
   backdrop-filter: blur(2px);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,11 +28,15 @@
 
 .ProductDetails__container-img {
   width: 10rem;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 .ProductDetails__container-img img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .ProductDetails__container-down {
