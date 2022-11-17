@@ -3,6 +3,7 @@ import "./Header.css";
 import logo from "../../Assets/LOGO.png";
 import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart";
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
+import { AiOutlineCloseCircle } from "@react-icons/all-files/ai/AiOutlineCloseCircle";
 import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";
 
@@ -20,12 +21,12 @@ function Header({ central }) {
   const [searchValue, setsearchValue] = useState("");
 
   useEffect(() => {
-    console.log(cartItemQuantity)
+    console.log(cartItemQuantity);
     fetchCategory();
     handleTotalCart();
   }, [cartItemQuantity, setcartItemQuantity]);
 
-  const handleSearchValue = (event) => {  
+  const handleSearchValue = (event) => {
     const { value } = event.target;
     setsearchValue(value);
   };
@@ -68,14 +69,28 @@ function Header({ central }) {
             }}
             className="Header__search"
           >
-            <AiOutlineSearch
-              size={45}
-              onClick={handlesearchBar}
-              style={{
-                border: serachBar ? "none" : "2px solid #0033a0",
-                background: serachBar ? "none" : "rgba(255, 255, 255, 0.4)",
-              }}
-            />
+            {!serachBar ? (
+              <AiOutlineSearch
+                size={45}
+                onClick={handlesearchBar}
+                style={{
+                  border: serachBar ? "none" : "2px solid #0033a0",
+                  background: serachBar ? "none" : "rgba(255, 255, 255, 0.4)",
+                }}
+              />
+            ) : (
+              <AiOutlineCloseCircle
+                size={45}
+                onClick={handlesearchBar}
+                
+                style={{
+                  border: serachBar ? "none" : "2px solid #0033a0",
+                  background: serachBar ? "none" : "rgba(255, 255, 255, 0.4)",
+                  color: "#0033a0",
+                }}
+              />
+            )}
+
             {serachBar && (
               <>
                 <input
@@ -96,8 +111,8 @@ function Header({ central }) {
         </div>
       )}
       <div className="Header__account">
-      <Link to={"/shoppingcart"}>
-        <AiOutlineShoppingCart size={40} />
+        <Link to={"/shoppingcart"}>
+          <AiOutlineShoppingCart size={40} />
         </Link>
         <div className="CartItem__quantity-display">
           <p>{cartItemQuantity}</p>
