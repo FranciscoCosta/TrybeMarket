@@ -1,7 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../../Context/Context";
-import "./Carrousel.css";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+import "./Carrousel.css";
 function Carrousel() {
   const { handleStart, isLoading, copyproductList } = useContext(Context);
   useEffect(() => {
@@ -16,10 +25,25 @@ function Carrousel() {
     }
   }, [isLoading]);
 
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
-    <div className="Carrousel">
+    <div className="Carrousel" id="Carrousel">
       {!isLoading && (
-        <div className="Carrousel__container">
+            <Swiper
+            // install Swiper modules
+            modules={[Navigation, Scrollbar, A11y]}
+            spaceBetween={40} 
+            slidesPerView={2}
+            navigation
+            scrollbar={{ draggable: true }}
+          >
           {copyproductList
             .filter(
               (product) =>
@@ -27,7 +51,7 @@ function Carrousel() {
                 product.original_price > product.price
             )
             .map((item) => (
-              <div className="Carrousel__container-item">
+              <SwiperSlide className="Carrousel__container-item" >
                 <div className="Carrousel__item-up">
                   <h1 className="Carrousel__item-title">{item.title}</h1>
                 </div>
@@ -46,9 +70,9 @@ function Carrousel() {
                     <span className="price__actual discount">{parseFloat(100-(item.price*100/item.original_price)).toFixed(2)}%</span>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-        </div>
+        </Swiper>
       )}
     </div>
   );

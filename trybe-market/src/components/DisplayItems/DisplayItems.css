@@ -20,6 +20,13 @@
   cursor: pointer;
 }
 
+.DiplayItems__item-container:hover {
+  transform: translateY(-7px);
+  transition: 0.4s all ease-in-out;
+  border: 1px solid #59b7e1;
+  box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
 .DisplayItems__item-title {
   text-align: center;
   min-height: 6rem;

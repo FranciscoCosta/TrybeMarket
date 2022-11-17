@@ -2,6 +2,7 @@ import React, { useEffect, useState,useContext } from "react";
 import "./CartItems.css";
 import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";
+import EmptyCart from "../EmptyCart/EmptyCart";
 function CartItems() {
   const [cartItemsAdded, setcartItemsAdded] = useState([]);
   const {handleTotalCart} = useContext(Context);
@@ -135,7 +136,7 @@ const handleDecrement=({target : {value}})=>{
           </div>
         </div>
       )
-      : <p>Não possui items no carrinho </p>}
+      : <EmptyCart/>}
     </div>
   );
 }

@@ -1,0 +1,32 @@
+.EmptyCart {
+  background: url(../../Assets/blackbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.EmptyCart__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.EmptyCart__img-container {
+  width: 20rem;
+}
+.EmptyCart__img-container img {
+  width: 100%;
+  height: 100%;
+}
+.EmptyCart__title {
+  font-size: 3rem;
+}

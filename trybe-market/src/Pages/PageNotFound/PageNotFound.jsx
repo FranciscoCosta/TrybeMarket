@@ -2,6 +2,7 @@ import React from 'react'
 import NOTFOUND from '../../Assets/404.jpg'
 import './PageNotFound.css'
 import { useNavigate } from "react-router-dom";
+import Footer from '../../components/Footer/Footer';
 
 function PageNotFound() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ function PageNotFound() {
           Home
         </button>
       </div>
+      <Footer/>
     </div>
   )
 }
