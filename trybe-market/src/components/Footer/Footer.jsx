@@ -38,9 +38,9 @@ function Footer() {
                 <a href="https://github.com/FranciscoCosta" target="__blank"><AiFillGithub  size={35}/></a>
                 <a href="https://www.instagram.com/tuga_no_brasil/" target="__blank"><AiFillInstagram  size={35}/></a>
                 </div>
-            <div className='Footer_legal'>
-                <p>Todos os direitos reservados a Francisco Costa 2022 ©</p>
             </div>
+            <div className='Footer__legal'>
+                <p>Todos os direitos reservados a Francisco Costa 2022 ©</p>
             </div>
         </div>
     </div>

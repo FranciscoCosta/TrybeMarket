@@ -28,7 +28,12 @@ function DisplayItems() {
     <div className="DisplayItems__container">
       {!isLoading &&
         productsList.map((item, index) => (
-          <div className="DiplayItems__item-container">
+          <div 
+          data-aos="zoom-in"
+          data-aos-delay="0"
+          data-aos-duration="750"
+          data-aos-anchor-placement="top-center"
+          className="DiplayItems__item-container">
             <h2
             onClick={()=> navigate(`/productDetails/${item.id}`)}
             className="DisplayItems__item-title">{item.title}</h2>

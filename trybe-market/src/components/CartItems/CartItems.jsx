@@ -75,19 +75,18 @@ const handleDecrement=({target : {value}})=>{
       {cartItemsAdded.length > 0 ? (
         <div className="CartItems__container">
           <div className="CartItems__right">
+          <h4 className="CartItems__total">Total : <span>R$ {totalValue}</span></h4>
+            <Link to={"/payment"}>
+            <button type="button" className="CartItems__finish-btn CartItems-btn">
+              Finalizar compra
+            </button>
+            </Link>
             <button
             className="CartItems__removeAllbtn CartItems-btn"
             onClick={handleRemoveAll}
             >
               Limpar Carrinho
             </button>
-            <h4 className="CartItems__total">Total : R$ {totalValue}</h4>
-            <Link to={"/payment"}>
-            <button type="button" className="CartItems__finish-btn CartItems-btn">
-              Finalizar compra
-            </button>
-
-            </Link>
           </div>
           <div className="CartItems__left">
             {cartItemsAdded.map((item) => (
@@ -130,6 +129,7 @@ const handleDecrement=({target : {value}})=>{
                 <h4 className="CartItems__info">Preço:<span> R${item.price}</span></h4>
                 <h4 className="CartItems__info">Unidades: <span>{item.quantity}</span></h4>
                 <h4 className="CartItems__info">Total: <span> R${parseFloat((item.price*item.quantity)).toFixed(2)}</span></h4>
+                <h4 className="CartItems__info">Unidades disponiveis:<span>{item.available_quantity}</span></h4>
                 </div>
               </div>
             ))}

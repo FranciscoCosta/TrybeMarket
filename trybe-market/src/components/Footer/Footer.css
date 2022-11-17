@@ -5,19 +5,20 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   min-height: 7rem;
   justify-content: center;
-  margin-top: 5rem;
 }
 
 .Footer__container {
   display: flex;
   gap: 10rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .Footer__left {
+  margin: 1rem;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -31,16 +32,11 @@
 
 .Social {
   display: flex;
-  gap: 2rem;
+  flex-direction: row;
+  gap: 0.5rem;
   cursor: pointer;
 }
 
-.Footer__right p {
-  color: #0033a0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  cursor: pointer;
-}
 .Footer svg {
   color: black;
 }
@@ -52,8 +48,9 @@
 }
 
 .Links__page {
-  color: #0033a0;
-  font-size: 1.5rem;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -65,4 +62,10 @@
 .Links__page:visited,
 .Links__page:active {
   text-decoration: underline;
+}
+.Footer__legal p {
+  color: #0033a0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
 }

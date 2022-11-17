@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   justify-content: center;
   padding-right: 4rem;
 }
@@ -30,11 +30,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100vh;
+  height: 80vh;
   gap: 1rem;
   flex: 4;
   padding-left: 4rem;
-  margin-top: 5rem;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -123,4 +122,14 @@
   box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
   color: black;
   transform: translateY(-7px);
+}
+
+.CartItems__total span {
+  font-size: 2rem;
+  color: #59b7e1;
+}
+
+.CartItems__total {
+  font-size: 2rem;
+  color: black;
 }

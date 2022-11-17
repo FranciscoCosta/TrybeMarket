@@ -80,13 +80,13 @@
 }
 .ProductDetails__aviable-quantity span {
   color: #59b7e1;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 .ProductDetails__waranty span {
   color: #0033a0;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .ProductDetails__container-quantity {

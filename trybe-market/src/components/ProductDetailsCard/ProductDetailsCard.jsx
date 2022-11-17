@@ -79,12 +79,13 @@ function ProductDetailsCard() {
               <div className="ProductDetails__container-img">
                 <img src={itemDetails.thumbnail} alt={itemDetails.title} />
               </div>
-              {itemDetails.shipping.free_shipping && (
                 <div className="DisplayItems__left-container">
+              {itemDetails.shipping.free_shipping && (
                 <div className="DisplayItems__free-shiping">
                   <GoPackage size={30} />
                   <p>Frete Grátis</p>
                   </div>
+                  )}
                   <div className="DisplayItems__share">
                   
                   <FacebookShareButton
@@ -110,7 +111,7 @@ function ProductDetailsCard() {
                     </WhatsappShareButton>
                   </div>
                   </div>
-              )}
+              
             </div>
             <div className="ProductDetails__container-right">
               {itemDetails.original_price && (
