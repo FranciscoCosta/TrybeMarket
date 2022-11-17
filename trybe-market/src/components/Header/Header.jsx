@@ -4,6 +4,7 @@ import logo from "../../Assets/LOGO.png";
 import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart";
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { AiOutlineCloseCircle } from "@react-icons/all-files/ai/AiOutlineCloseCircle";
+import { AiOutlineUser } from "@react-icons/all-files/ai/AiOutlineUser";
 import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";
 
@@ -111,6 +112,10 @@ function Header({ central }) {
         </div>
       )}
       <div className="Header__account">
+      
+      <Link to={"/profile"}>
+          <AiOutlineUser size={40} />
+        </Link>
         <Link to={"/shoppingcart"}>
           <AiOutlineShoppingCart size={40} />
         </Link>

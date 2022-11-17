@@ -118,3 +118,12 @@
   text-decoration: line-through;
   text-align: center;
 }
+
+.DisplayItems__share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
