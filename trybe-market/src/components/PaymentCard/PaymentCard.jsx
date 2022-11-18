@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./PaymentCard.css";
 
 function PaymentCard() {
@@ -7,6 +7,9 @@ function PaymentCard() {
   const [cep, setCep] = useState(0);
   const [adress, setAdress] = useState("");
   const [payment, setPayment] = useState("cash");
+  const [paymentData, setpaymentData] = useState([]);
+  const [totalPrice, settotalPrice] = useState(0)
+  const [finish, setfinish] = useState(false)
 
   const handleData = (event) => {
     if (event.target.name === "FirstName") {
@@ -23,19 +26,42 @@ function PaymentCard() {
   };
 
   const sendData=()=>{
-    const paymentInfo = {
+    const paymentInfo = [{
       firstname,
       surname,
       cep,
       adress,
       payment,
-    }
+    }]
+    setpaymentData(paymentInfo);
     localStorage.setItem('paymentData', JSON.stringify(paymentInfo));
+  }
+
+  useEffect(() => {
+    handleLocalStorage();
+  }, [])
+  const handleLocalStorage=()=>{
+    const data = JSON.parse(localStorage.getItem("paymentData")) || [];
+    setpaymentData(data);
+    const getValue = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const totalPrice = getValue.map((item)=>item.price * item.quantity).reduce((acc,curr)=>acc+curr)
+    settotalPrice(parseFloat(totalPrice).toFixed(2));
+  };
+
+  const handleBuy=()=>{
+    setfinish(true);
   }
 
   return (
     <div className="PaymentCard">
       <div className="PaymentCard__container">
+        <div className="Payment__Modal" style={{display: !finish ? "none" : "block"}}>
+          <h1>Obrigado por comprar conosco</h1>
+          <div>
+            <button>Continuar Comprando</button>
+            <button>Log Out</button>
+          </div>
+        </div>
         <div className="PaymentCard__left">
           <form className="Payment__form">
             <h1>Dados para o pagamento:</h1>
@@ -47,6 +73,7 @@ function PaymentCard() {
                   name="FirstName"
                   type="text"
                   id="FirstName"
+                  required
                 />
               </>
               <>
@@ -56,6 +83,7 @@ function PaymentCard() {
                   name="SurName"
                   type="text"
                   id="SurName"
+                  required
                 />
               </>
             </div>
@@ -70,9 +98,10 @@ function PaymentCard() {
               <div className="Payment__form-adress">
                 <label for="Adress">Endereço:</label>
                 <input
-                                onChange={handleData}
-                                name="Endereço"  
-                type="text" id="Endereço" />
+                onChange={handleData}
+                name="Endereço"  
+                type="text" id="Endereço" required/>
+
               </div>
             </div>
             <h2>Método de pagamento :</h2>
@@ -88,6 +117,7 @@ function PaymentCard() {
                   name="payment"
                   value="credit-card"
                   onChange={handleData}
+                  required
                 />
                 <label for="credit-card">Cartão de Crédito</label>
               </div>
@@ -108,15 +138,22 @@ function PaymentCard() {
           </form>
         </div>
         <div className="PaymentCard__right">
+          {console.log(paymentData.length ,"quiiiiiii")}
+          {paymentData.length > 0 ? 
           <div className="Payment__display">
             <h1>Confime os seus dados:</h1>
-            <p>Nome:</p>
-            <p>CEP:</p>
-            <p>Endereço:</p>
-            <p>Metodo de pagamento:</p>
-            <p>Total a pagar:</p>
-            <button>Finalizar compra:</button>
-          </div>
+            <p>Nome:{firstname} {surname}</p>
+            <p>CEP:{cep}</p>
+            <p>Endereço:{adress}</p>
+            <p>Metodo de pagamento:{payment}</p>
+            <p>Total a pagar:R$ {totalPrice}</p>
+            <button
+            type="button"
+            onClick={handleBuy}
+            >Finalizar compra</button>
+          </div> : <h4>
+            Ainda não temos a sua informação
+            </h4>}
         </div>
       </div>
     </div>

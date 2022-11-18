@@ -152,3 +152,15 @@
   width: 27rem;
   height: 40rem;
 }
+
+.Payment__Modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  top: 25%; /* Location of the box */
+  left: 32%;
+  width: 40rem; /* Full width */
+  height: 20rem; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background: white;
+}
