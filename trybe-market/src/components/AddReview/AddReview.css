@@ -1,0 +1,53 @@
+.AddReview {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AddReview-btn,
+.AddReview__sumbit {
+  background-color: #0033a0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 50px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  padding: 0px 10px;
+  width: max-content;
+  margin: 1rem 0.25rem;
+}
+
+.AddReview-btn:hover,
+.AddReview__sumbit:hover {
+  background-color: #59b7e1;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+}
+
+.AddReview__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 1rem 0.25rem;
+  padding: 1rem 0.1rem 0.1rem 0.25rem;
+  border-radius: 25px;
+  gap: 0.5rem;
+}
+
+.AddReview__textarea {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 80%;
+  padding: 5px;
+  font-size: 1.2rem;
+}

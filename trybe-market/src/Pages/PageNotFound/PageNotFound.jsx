@@ -20,7 +20,6 @@ function PageNotFound() {
           Home
         </button>
       </div>
-      <Footer/>
     </div>
   )
 }

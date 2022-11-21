@@ -11,10 +11,14 @@ import {
   WhatsappIcon,
   FacebookIcon,
 } from "react-share";
+import Loading from "../Loading/Loading";
+import DisplayReviews from "../DisplayReviews/DisplayReviews";
+import NoReviews from "../NoReviews/NoReviews";
 
 function ProductDetailsCard() {
   const params = useParams();
   const [inputQuantity, setinputQuantity] = useState(1);
+
   const {
     fetchItem,
     itemDetails,
@@ -23,12 +27,22 @@ function ProductDetailsCard() {
     cartItemQuantity,
     setcartItemQuantity,
     handleTotalCart,
+    update,
   } = useContext(Context);
 
   useEffect(() => {
+    handleReview();
     fetchItem(params.id);
     setisLoading(false);
-  }, [cartItemQuantity, setcartItemQuantity]);
+  }, [cartItemQuantity, setcartItemQuantity,update]);
+
+  const [review, setreview] = useState([]);
+
+  const handleReview=()=>{
+    const reviews = JSON.parse(localStorage.getItem("ItemsReviews")) || []
+    const filterreview = reviews.filter((items)=> items.id === itemDetails.id)
+    setreview(filterreview);
+  }
 
   const handleIncrement = () => {
     if (!inputQuantity < itemDetails.available_quantity) {
@@ -176,10 +190,12 @@ function ProductDetailsCard() {
               Adicionar ao carinho
             </button>
           </div>
+          {review.length > 0 ? <DisplayReviews id={itemDetails.id} /> : <NoReviews id={itemDetails.id}/>}
         </div>
       ) : (
-        <p> is loading</p>
+        <Loading/>
       )}
+      
     </div>
   );
 }

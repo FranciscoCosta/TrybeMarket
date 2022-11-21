@@ -9,7 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .PaymentCard__container {
   display: flex;
@@ -18,7 +18,7 @@
   flex-direction: row;
   height: 100%;
   width: 90%;
-  margin: 0 auto;
+  overflow: hidden;
 }
 .PaymentCard__left {
   flex: 2;
@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .PaymentCard__right {
   flex: 1;
@@ -33,6 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .Payment__form,
@@ -50,6 +52,11 @@
   transition: 0.7s all ease;
   width: 40rem;
   z-index: 1;
+}
+
+.Payment__display {
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .Payment__form-row {
@@ -104,7 +111,7 @@
   letter-spacing: 0.5px;
   padding: 8px 10px;
   transition: all 0.3s ease 0s;
-  width: 100%;
+  width: 70%;
 }
 
 .Payment__form-container-method {
@@ -150,17 +157,97 @@
 
 .Payment__display {
   width: 27rem;
-  height: 40rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .Payment__Modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 100; /* Sit on top */
-  top: 25%; /* Location of the box */
-  left: 32%;
-  width: 40rem; /* Full width */
-  height: 20rem; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background: white;
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  width: 100vw;
+  height: 130vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.Payment__Modal-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  border-radius: 45px;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  top: 10%;
+  position: relative;
+}
+
+.Payment__Modal-title {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  color: #0033a0;
+  border-radius: 15px;
+  font-size: 2rem;
+  text-align: center;
+  width: 32rem;
+}
+
+.Payment__display p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.Payment__display span {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #0033a0;
+}
+
+.Payment__display button,
+.Payment__Modal-btn,
+.Payment__cep-btn,
+.Payment__cep-btn-disable {
+  align-self: center;
+  background-color: #0033a0;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  height: 50px;
+  letter-spacing: 2.5px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  padding: 10px;
+  width: max-content;
+}
+
+.Payment__Modal-btn:hover {
+  background-color: #59b7e1;
+  box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+  color: black;
+  transform: translateY(-7px);
+}
+
+.Payment__Modal-container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.Payment__cep-btn-disable {
+  background-color: #2ee59d;
 }

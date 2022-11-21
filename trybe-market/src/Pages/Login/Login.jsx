@@ -6,12 +6,38 @@ import { Model } from "../../components/Store";
 import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
 import logo from "../../Assets/LOGO.png";
 import "./Login.css";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+} from 'firebase/auth';
 
-function Login() {
+import { auth } from '../../utils/firebase';
+
+
+function Login({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [valid, setvalid] = useState(false);
   const navigate = useNavigate();
+
+  const googleProvider = new GoogleAuthProvider();
+
+  const GoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log(result.user)
+      const user = {
+        display: result.user.displayName,
+        email: result.user.email,
+        userImg: result.user.photoURL,
+      };
+      const newLocal = localStorage.setItem('user', JSON.stringify((user)));
+      console.log(newLocal)
+      navigate('/home');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -39,13 +65,6 @@ function Login() {
     navigate("/home");
   };
 
-  const handleSignup = () => {
-    navigate("/signup");
-  };
-
-  const handleForgotPassoword = () => {
-    navigate("/forgotpassword");
-  };
   return (
     <div className="Login">
       <div className="Login__container">
@@ -74,9 +93,6 @@ function Login() {
             onChange={handleChange}
             value={password}
           />
-          <span 
-          onClick={handleForgotPassoword}
-          className="Login__span">Forgot password ?</span>
           </div>
           <button
             className="Login__button"
@@ -87,16 +103,9 @@ function Login() {
           >
             Enter
           </button>
-          <p className="Login__text">
-            Don't have an account ?{" "}
-            <span onClick={handleSignup} className="Login__span">
-              Sign up
-            </span>
-            .
-          </p>
-          
+           
           <button
-            // onClick={ GoogleLogin }
+            onClick={ GoogleLogin }
             type="button"
             className="Login__google-button"
           >

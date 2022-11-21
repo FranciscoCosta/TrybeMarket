@@ -146,7 +146,7 @@
   justify-content: center;
   position: absolute;
   top: -10%;
-  right: -10%;
+  right: -4%;
   color: white;
   background-color: #0033a0;
   border-radius: 50%;
@@ -158,4 +158,36 @@
 .CartItem__quantity-display p {
   font-size: 1rem;
   padding: 1px;
+}
+.Header__Log {
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-start;
+}
+.Header__acountInfo {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  width: 100%;
+}
+
+.Header__Log h3 {
+  text-decoration: none;
+  color: #0033a0;
+}
+
+.Header__link {
+  text-decoration: none;
+  color: #0033a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Header__account {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+.Header__link svg {
+  color: #0033a0;
 }

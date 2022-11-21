@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: max-content;
   z-index: 0;
 }

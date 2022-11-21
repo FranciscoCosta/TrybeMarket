@@ -25,11 +25,6 @@ function Footer() {
                 Carrinho
             </h4>
             </Link>
-            <Link to={"/payment"} style={{textDecoration: 'none'}}>
-            <h4 className='Links__page' >
-                Pagamento
-            </h4>
-            </Link>
 
             </div>
             <div className='Footer__right'>

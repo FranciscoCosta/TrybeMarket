@@ -9,6 +9,7 @@ function Provider({ children }) {
   const [isLoading, setisLoading] = useState(true)
   const [cartItemQuantity, setcartItemQuantity] = useState(0);
   const [itemDetails, setitemDetails] = useState([])
+  const [update, setupdate] = useState(false);
 
   // true-disable-next-line react-hooks/exhaustive-deps
   const fetchCategory = async() => {
@@ -37,6 +38,12 @@ function Provider({ children }) {
       setproductsList(results);
       setcopyproductList(results);
     }
+
+
+  const requestCEP = async(cep) =>{
+    const results = await fetchApi(`https://cep.awesomeapi.com.br/json/${cep}`)
+    return results
+  }
 
     const handleSearch = async(query) => {
       const url = ` https://api.mercadolibre.com/sites/MLB/search?q=${query}`
@@ -83,8 +90,11 @@ function Provider({ children }) {
     itemDetails,
     fetchItem,
     setisLoading,
+    setupdate,
+    update,
+    requestCEP,
       }),
-      [category,fetchCategory,productsList,isLoading,cartItemQuantity,copyproductList,itemDetails],
+      [category,fetchCategory,productsList,isLoading,cartItemQuantity,copyproductList,update,itemDetails],
     );
 
   return <Context.Provider value={ context }>{children}</Context.Provider>;

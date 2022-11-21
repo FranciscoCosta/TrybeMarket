@@ -1,0 +1,118 @@
+Date : 2022-11-18 19:19:09
+Directory : /home/xico/Desktop/TrybeMarket
+Total : 61 files,  35545 codes, 60 comments, 379 blanks, all 35984 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          4 |     32,360 |          0 |          4 |     32,364 |
+| JavaScript React |         23 |      1,487 |         12 |        143 |      1,642 |
+| CSS              |         24 |      1,469 |          0 |        173 |      1,642 |
+| JavaScript       |          8 |        167 |         25 |         25 |        217 |
+| Markdown         |          1 |         38 |          0 |         33 |         71 |
+| HTML             |          1 |         24 |         23 |          1 |         48 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                 | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                    |         61 |     35,545 |         60 |        379 |     35,984 |
+| trybe-market                                                                                         |         59 |     35,516 |         60 |        377 |     35,953 |
+| trybe-market/public                                                                                  |          1 |         24 |         23 |          1 |         48 |
+| trybe-market/src                                                                                     |         55 |      3,123 |         37 |        341 |      3,501 |
+| trybe-market/src/Context                                                                             |          2 |        135 |          1 |         21 |        157 |
+| trybe-market/src/Pages                                                                               |         19 |        658 |         10 |         66 |        734 |
+| trybe-market/src/Pages/Forgotpassword                                                                |          2 |          7 |          0 |          3 |         10 |
+| trybe-market/src/Pages/Homepage                                                                      |          2 |         40 |          0 |          5 |         45 |
+| trybe-market/src/Pages/Login                                                                         |          2 |        260 |          1 |         20 |        281 |
+| trybe-market/src/Pages/PageNotFound                                                                  |          2 |         81 |          0 |          7 |         88 |
+| trybe-market/src/Pages/Payment                                                                       |          2 |         18 |          0 |          3 |         21 |
+| trybe-market/src/Pages/Profile                                                                       |          2 |         12 |          0 |          3 |         15 |
+| trybe-market/src/Pages/ShoppingCart                                                                  |          2 |         19 |          0 |          3 |         22 |
+| trybe-market/src/Pages/Signup                                                                        |          2 |        183 |          9 |         15 |        207 |
+| trybe-market/src/Pages/productDetails                                                                |          2 |         26 |          0 |          6 |         32 |
+| trybe-market/src/components                                                                          |         27 |      2,250 |          9 |        234 |      2,493 |
+| trybe-market/src/components/AddReview                                                                |          2 |        127 |          0 |         16 |        143 |
+| trybe-market/src/components/Carrousel.js                                                             |          2 |        149 |          2 |         18 |        169 |
+| trybe-market/src/components/CartItems                                                                |          2 |        250 |          0 |         31 |        281 |
+| trybe-market/src/components/DisplayItems                                                             |          2 |        198 |          0 |         20 |        218 |
+| trybe-market/src/components/DisplayReviews                                                           |          2 |         88 |          0 |         14 |        102 |
+| trybe-market/src/components/EmptyCart                                                                |          2 |         47 |          0 |          6 |         53 |
+| trybe-market/src/components/Filters                                                                  |          2 |        147 |          0 |         14 |        161 |
+| trybe-market/src/components/Footer                                                                   |          2 |        104 |          0 |         13 |        117 |
+| trybe-market/src/components/Header                                                                   |          2 |        265 |          0 |         27 |        292 |
+| trybe-market/src/components/Loading                                                                  |          2 |         92 |          0 |          6 |         98 |
+| trybe-market/src/components/NoReviews                                                                |          2 |         12 |          0 |          4 |         16 |
+| trybe-market/src/components/PaymentCard                                                              |          2 |        401 |          0 |         30 |        431 |
+| trybe-market/src/components/ProductDetailsCard                                                       |          2 |        347 |          0 |         31 |        378 |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                             | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/xico/Desktop/TrybeMarket/package-lock.json                                                     | JSON             |         24 |          0 |          1 |         25 |
+| /home/xico/Desktop/TrybeMarket/package.json                                                          | JSON             |          5 |          0 |          1 |          6 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/README.md                                                | Markdown         |         38 |          0 |         33 |         71 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/package-lock.json                                        | JSON             |     32,278 |          0 |          1 |     32,279 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/package.json                                             | JSON             |         53 |          0 |          1 |         54 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/public/index.html                                        | HTML             |         24 |         23 |          1 |         48 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/App.css                                              | CSS              |         22 |          0 |          6 |         28 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/App.js                                               | JavaScript       |         22 |          0 |          4 |         26 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/App.test.js                                          | JavaScript       |          7 |          0 |          2 |          9 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Context/AuthContext.jsx                              | JavaScript React |         49 |          0 |         13 |         62 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Context/Context.js                                   | JavaScript       |         86 |          1 |          8 |         95 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Forgotpassword/Forgotpassword.css              | CSS              |          0 |          0 |          1 |          1 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Forgotpassword/Forgotpassword.jsx              | JavaScript React |          7 |          0 |          2 |          9 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Homepage/Homepage.css                          | CSS              |         17 |          0 |          3 |         20 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Homepage/Homepage.jsx                          | JavaScript React |         23 |          0 |          2 |         25 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Login/Login.css                                | CSS              |        147 |          0 |         13 |        160 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Login/Login.jsx                                | JavaScript React |        113 |          1 |          7 |        121 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/PageNotFound/PageNotFound.css                  | CSS              |         56 |          0 |          5 |         61 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/PageNotFound/PageNotFound.jsx                  | JavaScript React |         25 |          0 |          2 |         27 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Payment/Payment.css                            | CSS              |          3 |          0 |          1 |          4 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Payment/Payment.jsx                            | JavaScript React |         15 |          0 |          2 |         17 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Profile/Profile.css                            | CSS              |          0 |          0 |          1 |          1 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Profile/Profile.jsx                            | JavaScript React |         12 |          0 |          2 |         14 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/ShoppingCart/ShoppingCart.css                  | CSS              |          4 |          0 |          1 |          5 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/ShoppingCart/ShoppingCart.jsx                  | JavaScript React |         15 |          0 |          2 |         17 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Signup/Signup.css                              | CSS              |        126 |          0 |         13 |        139 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/Signup/Signup.jsx                              | JavaScript React |         57 |          9 |          2 |         68 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/index.js                                       | JavaScript       |         12 |          0 |          1 |         13 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/productDetails/ProductDetails.css              | CSS              |         12 |          0 |          1 |         13 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/Pages/productDetails/ProductDetails.jsx              | JavaScript React |         14 |          0 |          5 |         19 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/AddReview/AddReview.css                   | CSS              |         49 |          0 |          5 |         54 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/AddReview/AddReview.jsx                   | JavaScript React |         78 |          0 |         11 |         89 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Carrousel.js/Carrousel.css                | CSS              |         76 |          0 |          9 |         85 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Carrousel.js/Carrousel.jsx                | JavaScript React |         73 |          2 |          9 |         84 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/CartItems/CartItems.css                   | CSS              |        118 |          0 |         18 |        136 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/CartItems/CartItems.jsx                   | JavaScript React |        132 |          0 |         13 |        145 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/DisplayItems/DisplayItems.css             | CSS              |        114 |          0 |         16 |        130 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/DisplayItems/DisplayItems.jsx             | JavaScript React |         84 |          0 |          4 |         88 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/DisplayReviews/DisplayReviews.css         | CSS              |         33 |          0 |          3 |         36 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/DisplayReviews/DisplayReviews.jsx         | JavaScript React |         55 |          0 |         11 |         66 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/EmptyCart/EmptyCart.css                   | CSS              |         30 |          0 |          3 |         33 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/EmptyCart/EmptyCart.jsx                   | JavaScript React |         17 |          0 |          3 |         20 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Filters/Filters.css                       | CSS              |         45 |          0 |          5 |         50 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Filters/Filters.jsx                       | JavaScript React |        102 |          0 |          9 |        111 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Footer/Footer.css                         | CSS              |         62 |          0 |         10 |         72 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Footer/Footer.jsx                         | JavaScript React |         42 |          0 |          3 |         45 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Header/Header.css                         | CSS              |        144 |          0 |         18 |        162 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Header/Header.jsx                         | JavaScript React |        121 |          0 |          9 |        130 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Loading/Loading.css                       | CSS              |         16 |          0 |          2 |         18 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Loading/Loading.jsx                       | JavaScript React |         76 |          0 |          4 |         80 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/NoReviews/NoReviews.css                   | CSS              |          0 |          0 |          1 |          1 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/NoReviews/NoReviews.jsx                   | JavaScript React |         12 |          0 |          3 |         15 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/PaymentCard/PaymentCard.css               | CSS              |        226 |          0 |         19 |        245 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/PaymentCard/PaymentCard.jsx               | JavaScript React |        175 |          0 |         11 |        186 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/ProductDetailsCard/ProductDetailsCard.css | CSS              |        157 |          0 |         17 |        174 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/ProductDetailsCard/ProductDetailsCard.jsx | JavaScript React |        190 |          0 |         14 |        204 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/components/Store.js                                  | JavaScript       |         23 |          7 |          4 |         34 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/firebase-config.js                                   | JavaScript       |          0 |         13 |          2 |         15 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/index.css                                            | CSS              |         12 |          0 |          2 |         14 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/index.js                                             | JavaScript       |         16 |          0 |          3 |         19 |
+| /home/xico/Desktop/TrybeMarket/trybe-market/src/setupTests.js                                        | JavaScript       |          1 |          4 |          1 |          6 |
+| Total                                                                                                |                  |     35,545 |         60 |        379 |     35,984 |
++------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

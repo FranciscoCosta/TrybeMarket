@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../../Context/Context";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import Loading from "../Loading/Loading";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -21,7 +22,6 @@ function Carrousel() {
           product.original_price !== null &&
           product.original_price !== product.price
       );
-      console.log(value, "aqui");
     }
   }, [isLoading]);
 
@@ -31,27 +31,28 @@ function Carrousel() {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
   return (
     <div className="Carrousel" id="Carrousel">
-      {!isLoading && (
+      {!isLoading ? (
             <Swiper
             // install Swiper modules
-            modules={[Navigation, Scrollbar, A11y]}
+            modules={[Navigation, Scrollbar, A11y, Autoplay]}
+            autoplay={{delay: 2000 }}
             spaceBetween={40} 
             slidesPerView={2}
             navigation
             scrollbar={{ draggable: true }}
           >
-          {copyproductList
+          {copyproductList.length > 0 ? copyproductList
             .filter(
               (product) =>
                 product.original_price !== null &&
                 product.original_price > product.price
             )
             .map((item) => (
-              <SwiperSlide className="Carrousel__container-item" >
+              <SwiperSlide className="Carrousel__container-item" key={item.id}>
                 <div className="Carrousel__item-up">
                   <h1 className="Carrousel__item-title">{item.title}</h1>
                 </div>
@@ -71,9 +72,12 @@ function Carrousel() {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
+            )): <div>
+              <h3>Não temos produtos em promoção para a sua pesquisa.</h3>
+              </div>}
         </Swiper>
-      )}
+      )
+    : <Loading />}
     </div>
   );
 }

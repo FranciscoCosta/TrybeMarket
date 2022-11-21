@@ -5,8 +5,12 @@ import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppi
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { AiOutlineCloseCircle } from "@react-icons/all-files/ai/AiOutlineCloseCircle";
 import { AiOutlineUser } from "@react-icons/all-files/ai/AiOutlineUser";
+import { GrLogout } from "@react-icons/all-files/gr/GrLogout";
 import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";
+import { getAuth, signOut } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
+
 
 function Header({ central }) {
   const {
@@ -20,13 +24,25 @@ function Header({ central }) {
   } = useContext(Context);
   const [serachBar, setserachBar] = useState(false);
   const [searchValue, setsearchValue] = useState("");
+  const [logIn, setlogIn] = useState(false);
+  const [email, setemail] = useState('')
+  const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(cartItemQuantity);
     fetchCategory();
     handleTotalCart();
+    handleSession();
   }, [cartItemQuantity, setcartItemQuantity]);
 
+  const handleSession = () => {
+    const islogin = JSON.parse(localStorage.getItem("user")) || [];
+    if (islogin !== []) {
+      setlogIn(true);
+      setemail(islogin.email)
+    } else {
+      setlogIn(false);
+    }
+  };
   const handleSearchValue = (event) => {
     const { value } = event.target;
     setsearchValue(value);
@@ -39,6 +55,17 @@ function Header({ central }) {
     handleSearch(searchValue);
   };
 
+
+  const handleLogOut=()=>{
+    localStorage.clear();
+    const authU = getAuth();
+              signOut(authU).then(() => {
+                navigate("/")
+              }).catch((error) => {
+                console.log(error);
+              });
+              navigate("/")
+            } 
   return (
     <div className="Header">
       <div className="Header__container-logo">
@@ -83,7 +110,6 @@ function Header({ central }) {
               <AiOutlineCloseCircle
                 size={45}
                 onClick={handlesearchBar}
-                
                 style={{
                   border: serachBar ? "none" : "2px solid #0033a0",
                   background: serachBar ? "none" : "rgba(255, 255, 255, 0.4)",
@@ -111,9 +137,22 @@ function Header({ central }) {
           </div>
         </div>
       )}
+
       <div className="Header__account">
-      
-      <Link to={"/profile"}>
+      {logIn ? (
+            <Link to={"/"} className="Header__link">
+              <GrLogout
+              size={30}
+              onClick={handleLogOut}
+              />
+            </Link>
+
+        ) : (
+          <Link to={"/"} className="Header__link">
+            <GrLogout  size={30}/>
+          </Link>
+        )}
+        <Link to={"/profile"}>
           <AiOutlineUser size={40} />
         </Link>
         <Link to={"/shoppingcart"}>

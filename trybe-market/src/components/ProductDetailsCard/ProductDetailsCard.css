@@ -13,6 +13,7 @@
   min-height: 30rem;
   max-height: min-content;
   width: 55rem;
+  margin: 2rem;
 }
 
 .ProductDetails__title {

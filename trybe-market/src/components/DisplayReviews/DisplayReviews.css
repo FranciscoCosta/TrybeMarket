@@ -1,0 +1,35 @@
+.DisplayRiviews-title {
+  font-size: 1.5rem;
+  color: #0033a0;
+  cursor: pointer;
+}
+.DisplayReview__container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.DiplayReview-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.DisplayReview__date {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: -50px;
+}
+.DisplayReviews__container-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
