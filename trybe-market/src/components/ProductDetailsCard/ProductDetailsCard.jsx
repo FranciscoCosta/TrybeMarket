@@ -45,7 +45,7 @@ function ProductDetailsCard() {
   }
 
   const handleIncrement = () => {
-    if (!inputQuantity < itemDetails.available_quantity) {
+    if (inputQuantity < itemDetails.available_quantity   ) {
       setinputQuantity(inputQuantity + 1);
     }
   };
@@ -104,22 +104,22 @@ function ProductDetailsCard() {
                   
                   <FacebookShareButton
                       url={window.location.href}
-                      quote="Olha est produto aqui ...."
-                      hashtag="#Recipes..."
+                      quote="Olha este produto aqui ...."
+                      hashtag="#Product..."
                     >
                       <FacebookIcon size={40} round />
                     </FacebookShareButton>
                   <LinkedinShareButton
                       url={window.location.href}
-                      quote="Olha est produto aqui ...."
-                      hashtag="#Recipes..."
+                      quote="Olha este produto aqui ...."
+                      hashtag="#Product..."
                     >
                       <LinkedinIcon size={40} round />
                     </LinkedinShareButton>
                     <WhatsappShareButton
                       url={window.location.href}
-                      quote="Olha est produto aqui ...."
-                      hashtag="#Recipes..."
+                      quote="Olha este produto aqui ...."
+                      hashtag="#Product..."
                     >
                       <WhatsappIcon size={40} round />
                     </WhatsappShareButton>
