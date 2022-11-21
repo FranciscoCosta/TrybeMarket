@@ -157,3 +157,46 @@ canvas {
   font-weight: 600;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1360px) {
+  .Login {
+    height: max-content;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: min-content;
+  }
+  .Login__container {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-x: hidden;
+  }
+  .Login__form {
+    display: flex;
+    position: relative;
+    top: 50%;
+    right: 0%;
+    width: 365px;
+    margin: 0 auto;
+    border-radius: 0px;
+    height: max-content;
+    overflow-x: hidden;
+    margin-bottom: 0.25rem;
+  }
+  canvas {
+    width: 50vw;
+    height: 50vh;
+    left: -20%;
+    overflow-x: hidden;
+  }
+  .Login__button {
+    height: max-content;
+    margin-top: 1rem;
+    width: min-content;
+    padding: 5px 10px;
+  }
+  .Login__google-button {
+    height: min-content;
+    padding: 20px 1px;
+    margin-bottom: 2rem;
+  }
+}
