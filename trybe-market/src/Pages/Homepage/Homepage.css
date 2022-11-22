@@ -17,3 +17,13 @@
   text-align: center;
   color: #0033a0;
 }
+
+@media screen and (max-width: 809px) {
+  .DisplayItems__title {
+    font-size: 2rem;
+  }
+  .Carrousel__promotions-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+}

@@ -161,7 +161,7 @@ canvas {
 @media screen and (max-width: 1360px) {
   .Login {
     height: max-content;
-    flex-direction: column;
+    flex-direction: column-reverse;
     overflow-x: hidden;
     height: min-content;
   }

@@ -132,6 +132,10 @@
   background-color: #59b7e1;
 }
 
+.Header__mobile {
+  display: none;
+}
+
 .Header__category-dropdown:hover .Header__category-list {
   display: block;
 }
@@ -190,4 +194,70 @@
 }
 .Header__link svg {
   color: #0033a0;
+}
+
+@media screen and (min-width: 810px) and (max-width: 1100px) {
+  .Header {
+    width: 100%;
+  }
+  .Header__input-search {
+    max-width: 7rem;
+  }
+  .Header__container-logo img {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 809px) {
+  .Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+  }
+  .Header__container-logo {
+    margin-left: 0;
+    max-width: 8rem;
+  }
+  .Header__category-dropdown {
+    overflow-wrap: break-word;
+    padding: 0;
+  }
+  .Header__category-btn {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 130px;
+    height: min-content;
+    padding: 5px;
+  }
+  .Header__category-list:hover {
+    display: flex;
+    width: 130px;
+  }
+  .Header__category-list button {
+    width: 130px;
+  }
+  .Header__central {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Header__account {
+    position: absolute;
+    top: 10%;
+    right: -15%;
+    gap: 0.2rem;
+  }
+
+  .Header__account svg {
+    width: 30px;
+  }
+  .Header__link {
+    display: none;
+  }
 }

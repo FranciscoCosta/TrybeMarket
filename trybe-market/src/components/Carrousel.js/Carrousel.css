@@ -82,3 +82,9 @@
 .item__price-title {
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 809px) {
+  .Carrousel__promotions-title {
+    font-size: 2rem;
+  }
+}

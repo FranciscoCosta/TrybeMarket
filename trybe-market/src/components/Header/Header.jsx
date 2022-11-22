@@ -68,6 +68,9 @@ function Header({ central }) {
             } 
   return (
     <div className="Header">
+      {/* <div className="Header__mobile">
+        <p>Aqui</p>
+      </div> */}
       <div className="Header__container-logo">
         <Link to={"/home"}>
           {" "}
@@ -81,6 +84,7 @@ function Header({ central }) {
             <div className="Header__category-list">
               {category.map((cat) => (
                 <button
+                className="Header__category-btn-list"
                   onClick={() => handleCategory(cat.id)}
                   key={`category-${cat.id}`}
                 >
@@ -155,7 +159,7 @@ function Header({ central }) {
         <Link to={"/profile"}>
           <AiOutlineUser size={40} />
         </Link>
-        <Link to={"/shoppingcart"}>
+        <Link to={"/shoppingcart" } >
           <AiOutlineShoppingCart size={40} />
         </Link>
         <div className="CartItem__quantity-display">

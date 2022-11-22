@@ -69,3 +69,27 @@
   font-weight: 500;
   cursor: pointer;
 }
+@media screen and (max-width: 809px) {
+  .Footer,
+  .Footer__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .Social {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Footer__legal {
+    width: 10rem;
+    margin-left: 2rem;
+  }
+  .Footer__legal p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
