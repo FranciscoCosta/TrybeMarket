@@ -53,7 +53,6 @@ function ProfileCard() {
           {img ? <img src={img} alt="User Img" className='ProfilceCard__img'/> : <AiOutlineUser size={40}/>}
         </div>
       <div className='ProfileCard__Favorite'>
-        <h3 className='ProfileCard__Favorite-title'>Os meus Favoritos:</h3>
         {fav.length > 0 ? 
         <div className='ProfileCard__Favorite-container'>
             {fav.map((favorite)=>(
