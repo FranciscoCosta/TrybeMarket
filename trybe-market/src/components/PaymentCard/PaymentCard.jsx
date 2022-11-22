@@ -224,7 +224,17 @@ function  PaymentCard() {
                   value="Cartão de debito"
                   onChange={handleData}
                 />
-                <label for="debit-card">Cartão de debito</label>
+                <label for="debit-card">Cartão de Debito</label>
+              </div>
+              <div className="Payment__from-method">
+                <input
+                  type="radio"
+                  id="pix"
+                  name="payment"
+                  value="Pix"
+                  onChange={handleData}
+                />
+                <label for="debit-card">Cartão de Debito</label>
               </div>
             </div>
             <button
