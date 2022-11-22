@@ -214,8 +214,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 0.5rem;
+    min-height: 10rem;
   }
   .Header__container-logo {
     margin-left: 0;
@@ -242,13 +242,19 @@
   .Header__central {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0;
     align-items: center;
     justify-content: center;
   }
 
+  .Header__search {
+    margin-top: 1rem;
+  }
+
   .Header__account {
     position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
     top: 10%;
     right: -15%;
     gap: 0.2rem;
@@ -256,5 +262,16 @@
 
   .Header__account svg {
     width: 30px;
+  }
+
+  .CartItem__quantity-display {
+    position: absolute;
+    top: -5%;
+    gap: 0;
+  }
+
+  .Header__input-search {
+    width: 10rem;
+    margin-top: 0rem;
   }
 }

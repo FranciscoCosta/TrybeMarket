@@ -87,4 +87,47 @@
   .Carrousel__promotions-title {
     font-size: 2rem;
   }
+
+  .Carrousel__container-item {
+    gap: 0;
+    min-width: 20rem;
+  }
+  .Carrousel__item-img {
+    align-self: center;
+    width: 7rem;
+    height: 7rem;
+  }
+  .Carrousel__item-title {
+    font-size: 1.3rem;
+    max-height: 1.5rem;
+    max-width: 18rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .Carrousel__item-up {
+    margin-left: 0rem;
+    display: flex;
+  }
+  .Carrousel__item-down {
+    gap: 1rem;
+  }
+  .Carrousel__promotion {
+    font-size: 1rem;
+  }
+  .price__actual {
+    font-size: 1.2rem;
+  }
+
+  .price__old {
+    font-size: 1.2rem;
+  }
+  .price__actual {
+    font-size: 1.2rem;
+  }
+  .discount {
+    font-size: 1.2rem;
+  }
+  .item__price-title {
+    font-size: 1rem;
+  }
 }
