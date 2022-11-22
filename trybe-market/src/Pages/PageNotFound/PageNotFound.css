@@ -58,3 +58,12 @@
   color: black;
   transform: translateY(-7px);
 }
+
+@media screen and (max-width: 809px) {
+  .PageNotFound__container {
+    width: 100%;
+  }
+  .PageNotFound__img-container img {
+    width: 10rem;
+  }
+}

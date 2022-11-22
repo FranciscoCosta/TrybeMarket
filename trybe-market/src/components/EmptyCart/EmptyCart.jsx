@@ -6,7 +6,7 @@ function EmptyCart() {
   return (
     <div className='EmptyCart'>
         <div className='EmptyCart__container'>
-            <h1 className='EmptyCart__title'>Não possui itens no seu carrinho <FaSadCry size={50}/>.</h1>
+            <h1 className='EmptyCart__title'>Não possui itens no seu carrinho <FaSadCry size={50}/></h1>
         </div>
 
     </div>
