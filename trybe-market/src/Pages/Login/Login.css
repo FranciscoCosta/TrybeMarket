@@ -158,7 +158,7 @@ canvas {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1100px) {
   .Login {
     height: max-content;
     flex-direction: column-reverse;
@@ -198,5 +198,22 @@ canvas {
     height: min-content;
     padding: 20px 1px;
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 809px) {
+  .canvas {
+    display: none;
+  }
+  .Login {
+    overflow: hidden;
+  }
+  .Login__container {
+    overflow: hidden;
+  }
+  .Login__form {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
 }
