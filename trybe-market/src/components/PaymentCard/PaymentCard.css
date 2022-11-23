@@ -20,6 +20,9 @@
   width: 90%;
   overflow: hidden;
 }
+.Payment__form-title {
+  text-align: center;
+}
 .PaymentCard__left {
   flex: 2;
   height: 100%;

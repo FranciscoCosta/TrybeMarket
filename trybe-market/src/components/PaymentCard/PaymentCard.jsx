@@ -130,7 +130,7 @@ function  PaymentCard() {
         </div>
         <div className="PaymentCard__left">
           <form className="Payment__form">
-            <h1>Dados para o pagamento:</h1>
+            <h1 className="Payment__form-title">Dados para o pagamento:</h1>
             <div className="Payment__form-Name">
               <>
                 <label for="FirstName">Nome:</label>
