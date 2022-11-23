@@ -20,7 +20,6 @@ function CartItems() {
   const handleRemoveItem=({target : {value}})=>{
     const local = JSON.parse(localStorage.getItem("cartItems"));
     const result = local.filter((item)=> item.id !== value)
-    console.log(result)
     localStorage.setItem('cartItems', JSON.stringify(result));
     handleTotalCart();
   } 

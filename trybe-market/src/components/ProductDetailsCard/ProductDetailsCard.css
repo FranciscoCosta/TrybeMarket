@@ -17,6 +17,7 @@
 }
 
 .ProductDetails__title {
+  text-align: center;
   font-size: 2.5rem;
   max-width: 45rem;
   margin-top: 2rem;
@@ -133,6 +134,8 @@
 .ProductDetails__quanity-values {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .ProductDetails__quantity-input {
   background-color: rgba(255, 255, 255, 0);
@@ -170,4 +173,63 @@
   background-color: #59b7e1;
   border: 1px solid rgba(0, 0, 0, 0.45);
   box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 1000px) {
+  .ProductDetails__container {
+    width: 100vw;
+    height: max-content;
+    margin: 0;
+    margin-top: 2rem;
+    border-radius: 0px;
+    overflow-x: hidden;
+  }
+  .ProductDetails__title {
+    text-align: center;
+    font-size: 2rem;
+    max-width: 80%;
+    margin-top: 2rem;
+  }
+  .ProductDetails__container p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .ProductDetails__container-img {
+    width: 8rem;
+  }
+  .ProductDetails__container-down {
+    gap: 2rem;
+  }
+  .ProductDetails__original-price span {
+    font-size: 1.2rem;
+  }
+  .ProductDetails__price span {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+  .ProductDetails__discount span {
+    font-size: 2rem;
+  }
+  .ProductDetails__aviable-quantity span {
+    font-size: 1.2rem;
+  }
+  .ProductDetails__waranty span {
+    color: #0033a0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .ProductDetails__quantity-cart-btn {
+    height: 40px;
+  }
+  .ProductDetails__quantity-cart-btn:hover {
+    background-color: #59b7e1;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    box-shadow: 1px 15px 20px rgba(255, 255, 255, 0.4);
+  }
+  .ProductDetails__quanity-values {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }

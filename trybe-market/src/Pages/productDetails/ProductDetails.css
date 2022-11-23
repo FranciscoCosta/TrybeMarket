@@ -10,3 +10,10 @@
   height: max-content;
   z-index: 0;
 }
+
+@media screen and (max-width: 1000px) {
+  .ProductDetails {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}

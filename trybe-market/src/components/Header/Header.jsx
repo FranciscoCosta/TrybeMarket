@@ -153,7 +153,7 @@ function Header({ central }) {
 
         ) : (
           <Link to={"/"} className="Header__link">
-            <GrLogout  size={30}/>
+            <GrLogout  size={30} className="Header_logout"/>
           </Link>
         )}
         <Link to={"/profile"}>

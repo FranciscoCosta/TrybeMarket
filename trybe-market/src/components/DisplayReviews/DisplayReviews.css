@@ -2,6 +2,7 @@
   font-size: 1.5rem;
   color: #0033a0;
   cursor: pointer;
+  text-align: center;
 }
 .DisplayReview__container {
   margin-top: 1rem;

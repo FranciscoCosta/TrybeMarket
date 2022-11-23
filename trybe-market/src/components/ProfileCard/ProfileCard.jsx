@@ -19,12 +19,10 @@ function ProfileCard() {
 
   const handleUserInfo=()=>{
     const dataLocal = JSON.parse(localStorage.getItem("user")) || [];
-    console.log(dataLocal)
     if(dataLocal.email !== '' ){
       setEmail(dataLocal.email)
     }
     if(dataLocal.userImg !== ''){
-      console.log(dataLocal.userImg)
       setImg(dataLocal.userImg)
     }
     if(dataLocal.display !== ''){

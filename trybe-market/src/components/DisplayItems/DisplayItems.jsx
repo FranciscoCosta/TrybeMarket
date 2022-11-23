@@ -51,10 +51,8 @@ function DisplayItems() {
       img,
     };
     const newArray = [...oldFav,fav];
-    console.log(newArray,"Novo array")
     localStorage.setItem("Favorites",JSON.stringify(newArray));
     setlocalfav(newArray);
-    console.log(localfav)
   };
 
   const removeFavorite = (id) => {

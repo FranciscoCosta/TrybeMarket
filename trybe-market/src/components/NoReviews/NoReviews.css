@@ -1,0 +1,11 @@
+.NoReviews__title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .NoReviews__title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
