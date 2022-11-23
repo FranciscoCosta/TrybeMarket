@@ -215,8 +215,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 10rem;
-    position: relative;
+    height: max-content;
   }
   .Header__container-logo {
     margin-left: 0;

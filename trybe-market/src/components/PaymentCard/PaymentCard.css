@@ -251,3 +251,88 @@
 .Payment__cep-btn-disable {
   background-color: #2ee59d;
 }
+
+@media screen and (max-width: 1250px) {
+  .PaymentCard {
+    height: max-content;
+  }
+  .PaymentCard__container {
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    gap: 2rem;
+  }
+  .PaymentCard__left,
+  .PaymentCard__right {
+    flex: 1;
+    border-radius: 0px;
+    margin-top: 2rem;
+    width: 100%;
+    height: max-content;
+  }
+
+  .Payment__form,
+  .Payment__display {
+    gap: 1.5rem;
+    width: 100%;
+    border-radius: 0px;
+    height: max-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .Payment__form-row {
+    padding: 2rem 0rem;
+    gap: 0.15rem;
+  }
+
+  .Payment__form-Name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  .Payment__form-Name input {
+    display: flex;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .Payment__form-adress {
+    margin-top: 1rem;
+  }
+  .Payment__display {
+    height: max-content;
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .Payment__form-container-method {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 35%;
+  }
+  .Payment__Modal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+  }
+
+  .Payment__Modal-title {
+    font-size: 1.3rem;
+    padding: 5px;
+    width: max-content;
+  }
+  .Payment__display button,
+  .Payment__Modal-btn,
+  .Payment__cep-btn,
+  .Payment__cep-btn-disable {
+    width: max-content;
+  }
+}

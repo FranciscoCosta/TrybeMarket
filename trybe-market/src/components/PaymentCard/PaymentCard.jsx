@@ -221,7 +221,7 @@ function  PaymentCard() {
                   type="radio"
                   id="debit-card"
                   name="payment"
-                  value="Cartão de debito"
+                  value="Cartão de Debito"
                   onChange={handleData}
                 />
                 <label for="debit-card">Cartão de Debito</label>
@@ -231,10 +231,10 @@ function  PaymentCard() {
                   type="radio"
                   id="pix"
                   name="payment"
-                  value="Pix"
+                  value="pix"
                   onChange={handleData}
                 />
-                <label for="debit-card">Cartão de Debito</label>
+                <label for="pix">Pix</label>
               </div>
             </div>
             <button
