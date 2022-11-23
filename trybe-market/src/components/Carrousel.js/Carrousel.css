@@ -87,10 +87,20 @@
   .Carrousel__promotions-title {
     font-size: 2rem;
   }
+  .Carrousel__container {
+    gap: 0;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
 
   .Carrousel__container-item {
     gap: 0;
     min-width: 20rem;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    margin-right: 0rem;
   }
   .Carrousel__item-img {
     align-self: center;

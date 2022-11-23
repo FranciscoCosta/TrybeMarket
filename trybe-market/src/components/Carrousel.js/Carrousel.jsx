@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Context } from "../../Context/Context";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
 import Loading from "../Loading/Loading";
+import { useNavigate } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,6 +14,7 @@ import 'swiper/css/scrollbar';
 
 import "./Carrousel.css";
 function Carrousel() {
+  const navigate = useNavigate();
   const { handleStart, isLoading, copyproductList } = useContext(Context);
   useEffect(() => {
     handleStart();
@@ -40,7 +42,7 @@ function Carrousel() {
             // install Swiper modules
             modules={[Navigation, Scrollbar, A11y, Autoplay]}
             autoplay={{delay: 2000 }}
-            spaceBetween={40} 
+            spaceBetween={0} 
             slidesPerView={2}
             navigation
             scrollbar={{ draggable: true }}
@@ -52,7 +54,9 @@ function Carrousel() {
                 product.original_price > product.price
             )
             .map((item) => (
-              <SwiperSlide className="Carrousel__container-item" key={item.id}>
+              <SwiperSlide 
+              onClick={() => navigate(`/productDetails/${item.id}`)}
+              className="Carrousel__container-item" key={item.id} >
                 <div className="Carrousel__item-up">
                   <h1 className="Carrousel__item-title">{item.title}</h1>
                 </div>
