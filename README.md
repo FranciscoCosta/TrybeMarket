@@ -1,7 +1,8 @@
 <h1> TrybeMarket </h1> 
 <br/>
 <a href="https://ibb.co/khHdFnr"><img src="https://i.ibb.co/gDjnC1X/Captura-de-ecr-de-2023-03-03-14-53-19.png" alt="Captura-de-ecr-de-2023-03-03-14-53-19" border="0"></a>
-TrybeMarket é um projeto de e-commerce desenvolvido com o objetivo de desafiar e reforçar o meu conhecimento em React e tecnologias relacionadas.
+<br/>
+<b>TrybeMarket</b> é um projeto de e-commerce desenvolvido com o objetivo de desafiar e reforçar o meu conhecimento em React e tecnologias relacionadas.
 <br/>
 O projeto foi projetado para fornecer aos usuários uma experiência de compra online fácil e agradável.
 <br/>
