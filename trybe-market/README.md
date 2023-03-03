@@ -1,70 +1,85 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h1> TrybeMarket </h1> 
+<br/>
+<a href="https://ibb.co/khHdFnr"><img src="https://i.ibb.co/gDjnC1X/Captura-de-ecr-de-2023-03-03-14-53-19.png" alt="Captura-de-ecr-de-2023-03-03-14-53-19" border="0"></a>
+<br/>
+<b>TrybeMarket</b> é um projeto de e-commerce desenvolvido com o objetivo de desafiar e reforçar o meu conhecimento em React e tecnologias relacionadas.
+<br/>
+O projeto foi projetado para fornecer aos usuários uma experiência de compra online fácil e agradável.
+<br/>
+<br/>
+<h3>Deploy do projeto:</h3>
+<br/>
+<a href="https://trybe-market.vercel.app" target="_blank" />TrybeMarket</a>
+<br/>
+<br/>
+<h2>Tecnologias e ferramentas utilizadas:</h2>
+<br/>
+<li>Git</li> 
+<br/>
+<li> React</li> 
+<br/>
+<li> CSS</li> 
+<br/>
+<li> Rest API</li> 
+<br/>
+<li> React-Router</li> 
+<br/>
+<li> UseContext</li> 
+<br/>
+<li> Firebase</li> 
+<br/>
+<li> Three.js</li> 
+<br/>
+<li> Swiper</li> 
+<br/>
+<br/>
+<h2>Funcionalidades:</h2>
+<br/>
+<b>Navegação:</b> React-Router foi usado para facilitar a navegação entre as diferentes páginas do website.
+<br/>
+<br/>
+<b>Elemento 3D:</b> Um elemento 3D chamativo foi implementado usando a biblioteca Three.js na página inicial para chamar a atenção dos usuários.
+<br/>
+<br/>
+<b>Autenticação:</b>  O banco de dados do Firebase foi usado para autenticar usuários via Google. Um sistema de login e cadastro será implementado no futuro.
+<br/>
+<br/>
+<b>Carrossel dinâmico:</b>  A API fornecida pelo Mercado Livre foi usada para popular a página inicial com itens, e um carrossel dinâmico foi implementado para exibir itens em promoção com base na pesquisa ou categoria do usuário.
+<br/>
+<br/>
+<b>Filtros e ordenação:</b>  Os usuários podem aplicar filtros para ordenar os itens por ordem alfabética, preço e exibir apenas itens com frete grátis. Os usuários também podem adicionar itens ao carrinho.
+<br/>
+<br/>
+<b>Detalhes do produto:</b>  Ao clicar na imagem ou título do item na página inicial, o usuário é direcionado para a página de detalhes do produto. Aqui, o usuário pode ver mais detalhes sobre o produto e adicionar ou remover a quantidade do produto. Um sistema de avaliação também foi implementado, onde os usuários podem escrever um comentário sobre o produto, que é salvo com a data e descrição da avaliação e renderizado na página. Os usuários também podem compartilhar o produto no Whatsapp, Facebook e Linkedin.
+<br/>
+<br/>
+<b>Carrinho:</b>  Os usuários podem ir para a página do carrinho de compras, onde podem modificar a quantidade do item e remover itens. Os usuários também podem ver o preço total de cada item e o preço final da compra.
+<br/>
+<br/>
+<b>Pagamento:</b>  Os usuários podem ir para a página de pagamento, onde são apresentados com um formulário para inserir seus dados. Uma API é usada para preencher automaticamente os campos de cidade, estado e endereço com base no código postal correto inserido.
+<br/>
+<br/>
+<b>Perfil:</b>  Os usuários podem ver os detalhes de sua conta e os itens que favoritaram na página de perfil.
+<br/>
+<br/>
+<b>Design responsivo:</b>  Toda a aplicação foi desenvolvida como 100% responsiva, garantindo a melhor experiência do usuário em dispositivos móveis.
+<br/>
+<br/>
+<br/>
+<h2>Como executar o projeto:</h2>
+<br/>
+<br/>
+Clone o repositório em sua máquina local.
+<br/>
+<br/>
+Instale as dependências necessárias com o comando npm install.
+<br/>
+<br/>
+Execute o comando npm start para iniciar o projeto.
+<br/>
+<br/>
+Abra o navegador em http://localhost:3000 para visualizar o projeto.
+<br/>
+<br/>
+<h2>Conclusão</h2>
+TrybeMarket é um projeto de e-commerce projetado para fornecer uma experiência de compra online fácil e agradável. Ele utiliza diversas tecnologias e ferramentas para fornecer aos usuários recursos como carrosséis dinâmicos, filtros e ordenação, sistemas de avaliação e um design responsivo.
