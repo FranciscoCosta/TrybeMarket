@@ -8,7 +8,7 @@ O projeto foi projetado para fornecer aos usuários uma experiência de compra o
 <br/>
 <h3>Deploy do projeto:</h3>
 <br/>
-<a href="https://trybe-market.vercel.app target="" />TrybeMarket</a>
+<a href="https://trybe-market.vercel.app" target="_blank" />TrybeMarket</a>
 <br/>
 <br/>
 <h2>Tecnologias e ferramentas utilizadas:</h2>
